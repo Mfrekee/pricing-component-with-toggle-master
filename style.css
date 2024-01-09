@@ -1,0 +1,191 @@
+body{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+i{
+    font-size: 1.5em;
+    margin-right: 0.5em;
+}
+
+img{
+    width: 9%;
+}
+
+.slide{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input{
+    width: 0;
+    opacity: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+   background-color: gray;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:active{
+   background-color:  hsl(236, 72%, 79%);
+}
+
+.slider::before{
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+
+input:focus + .slider{
+    box-shadow: 0 0 1px hsl(232, 13%, 33%);
+}
+input:checked + .slider{
+    background-color: black;
+}
+
+input:checked + .slider::before{
+    transform: translateX(26px);
+}
+
+.yearly{
+    display: none;
+    font-size: 3rem;
+    color: black;
+}
+
+.monthly{
+    font-size: 3rem;
+    color: grey;
+}
+
+
+.plans{
+    background-color: white;
+    border-radius: 5px;
+    color:black ;
+    padding: 2rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+.plans a{
+    background: linear-gradient( hsl(236, 72%, 79%), hsl(237, 63%, 64%) );
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 0.5rem 4rem;
+    color: white;
+    text-decoration: none;
+}
+.plans a:hover{
+    color: white;
+    background: hsl(236, 72%, 79%);
+    cursor: pointer;
+}
+.plans a:active{
+    background: none;
+    border:solid 1.5px hsl(236, 72%, 79%);
+    color: hsl(236, 72%, 79%);
+}
+
+.professional{
+    background: linear-gradient( hsl(236, 72%, 79%), hsl(237, 63%, 64%) );
+    color: white ;
+    transform: scale(1.05);
+}
+.professional a{
+    background: white;
+    color: hsl(236, 72%, 79%);
+}
+.professional a:active{
+    background: none;
+    border:solid 1.5px white;
+    color: white;
+}
+.professional p{
+    color: white;
+}
+
+.credit-cards{
+
+    margin: 2rem auto;
+
+}
+.credit-cards a{
+    width: 100%; 
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paypal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paypal img{
+    width: 17%;
+}
+
+.attribution { 
+    text-align: center; 
+   font-size:0.5em ; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+@media (min-width: 1000px){
+    section {
+        display: flex;
+        flex-direction: column;
+        height: 75dvh;
+        justify-content: center;
+    }
+
+    img{
+        width: 5%;
+    }
+    .plan-div{
+        display: flex;
+        justify-content: center;
+    }
+
+    .paypal img{
+        width: 9%;
+    }
+}
+
+@media (min-width: 1400px){
+    body{
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 2000px){
+    body{
+        font-size: 3rem;
+    }
+}
