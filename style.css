@@ -1,18 +1,18 @@
-body{
+body {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 
-i{
+i {
     font-size: 1.5em;
     margin-right: 0.5em;
 }
 
-img{
+img {
     width: 9%;
 }
 
-.slide{
+.slide {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -20,34 +20,35 @@ img{
     gap: 1rem;
 }
 
-.switch{
+.switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
 }
 
-.switch input{
+.switch input {
     width: 0;
     opacity: 0;
 }
 
-.slider{
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
     bottom: 0;
-    left:0;
+    left: 0;
     right: 0;
-   background-color: gray;
+    background-color: gray;
     transition: .4s;
     border-radius: 34px;
 }
-.slider:active{
-   background-color:  hsl(236, 72%, 79%);
+
+.slider:active {
+    background-color: hsl(236, 72%, 79%);
 }
 
-.slider::before{
+.slider::before {
     position: absolute;
     content: "";
     width: 26px;
@@ -60,82 +61,90 @@ img{
 }
 
 
-input:focus + .slider{
+input:focus+.slider {
     box-shadow: 0 0 1px hsl(232, 13%, 33%);
 }
-input:checked + .slider{
+
+input:checked+.slider {
     background-color: black;
 }
 
-input:checked + .slider::before{
+input:checked+.slider::before {
     transform: translateX(26px);
+    /* background-color: blue; */
 }
 
-.yearly{
+.yearly {
     display: none;
     font-size: 3rem;
     color: black;
 }
 
-.monthly{
+.monthly {
     font-size: 3rem;
     color: grey;
 }
 
 
-.plans{
+.plans {
     background-color: white;
     border-radius: 5px;
-    color:black ;
+    color: black;
     padding: 2rem;
     line-height: 1.5;
     margin: 1rem 0;
 }
 
-.plans a{
-    background: linear-gradient( hsl(236, 72%, 79%), hsl(237, 63%, 64%) );
+.plans a {
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     border-radius: 4px;
     text-transform: uppercase;
     padding: 0.5rem 4rem;
     color: white;
     text-decoration: none;
 }
-.plans a:hover{
+
+.plans a:hover {
     color: white;
     background: hsl(236, 72%, 79%);
     cursor: pointer;
 }
-.plans a:active{
+
+.plans a:active {
     background: none;
-    border:solid 1.5px hsl(236, 72%, 79%);
+    border: solid 1.5px hsl(236, 72%, 79%);
     color: hsl(236, 72%, 79%);
 }
 
-.professional{
-    background: linear-gradient( hsl(236, 72%, 79%), hsl(237, 63%, 64%) );
-    color: white ;
+.professional {
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
     transform: scale(1.05);
 }
-.professional a{
+
+.professional a {
     background: white;
     color: hsl(236, 72%, 79%);
 }
-.professional a:active{
+
+.professional a:active {
     background: none;
-    border:solid 1.5px white;
-    color: white;
-}
-.professional p{
+    border: solid 1.5px white;
     color: white;
 }
 
-.credit-cards{
+.professional p {
+    color: white;
+}
+
+.credit-cards {
 
     margin: 2rem auto;
 
 }
-.credit-cards a{
-    width: 100%; 
+
+.credit-cards a {
+    width: 100%;
     text-decoration: none;
     text-align: center;
     display: flex;
@@ -143,49 +152,55 @@ input:checked + .slider::before{
     align-items: center;
 }
 
-.paypal{
+.paypal {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.paypal img{
+
+.paypal img {
     width: 17%;
 }
 
-.attribution { 
-    text-align: center; 
-   font-size:0.5em ; 
+.attribution {
+    text-align: center;
+    font-size: 0.7em;
 }
-.attribution a { color: hsl(228, 45%, 44%); }
-@media (min-width: 1000px){
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1000px) {
     section {
         display: flex;
         flex-direction: column;
-        height: 75dvh;
+        height: 90dvh;
         justify-content: center;
     }
 
-    img{
+    img {
         width: 5%;
     }
-    .plan-div{
+
+    .plan-div {
         display: flex;
         justify-content: center;
     }
 
-    .paypal img{
+    .paypal img {
         width: 9%;
     }
 }
 
-@media (min-width: 1400px){
-    body{
+@media (min-width: 1400px) {
+    body {
         font-size: 1.4rem;
     }
 }
 
-@media (min-width: 2000px){
-    body{
+@media (min-width: 2000px) {
+    body {
         font-size: 3rem;
     }
 }
